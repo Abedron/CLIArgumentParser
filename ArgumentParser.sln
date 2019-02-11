@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArgumentParser", "ArgumentParser\ArgumentParser.csproj", "{57894192-763B-4999-9E18-721B5E0C1515}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArgumentParser_uTest", "ArgumentParser_uTest\ArgumentParser_uTest.csproj", "{C7E29E20-8C93-4CBE-8407-FE14DA11734E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57894192-763B-4999-9E18-721B5E0C1515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57894192-763B-4999-9E18-721B5E0C1515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57894192-763B-4999-9E18-721B5E0C1515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57894192-763B-4999-9E18-721B5E0C1515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E29E20-8C93-4CBE-8407-FE14DA11734E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E29E20-8C93-4CBE-8407-FE14DA11734E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E29E20-8C93-4CBE-8407-FE14DA11734E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E29E20-8C93-4CBE-8407-FE14DA11734E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83FA6879-D27C-4D37-941F-F4C903FF4ABD}
+	EndGlobalSection
+EndGlobal
