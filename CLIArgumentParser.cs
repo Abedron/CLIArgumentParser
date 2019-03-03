@@ -5,22 +5,11 @@ namespace CLI
 {
     public class CLIArgumentParser<T> where T : new()
     {
-        public CaseType CaseType => _caseType;
-        public char NameSeparator => _nameSeparator;
-        public char ValueSeparator => _valueSeparator;
-        
-        private readonly CaseType _caseType;
-        private readonly char _nameSeparator;
-        private readonly char _valueSeparator;
-        private readonly Capitalization _capital;
+        public char ValueSeparator { get; }
 
-        public CLIArgumentParser(CaseType caseType, char nameSeparator = '-', char valueSeparator = '=')
+        public CLIArgumentParser(char valueSeparator = '=')
         {
-            _nameSeparator = nameSeparator;
-            _valueSeparator = valueSeparator;
-            _caseType = caseType;
-            
-            _capital = new Capitalization(caseType, nameSeparator);
+            ValueSeparator = valueSeparator;
         }
 
         public T Parse()
@@ -36,13 +25,13 @@ namespace CLI
 
             foreach (string argument in arguments)
             {
-                string[] parameters = argument.Split(_valueSeparator);
+                string[] parameters = argument.Split(ValueSeparator);
 
                 if (parameters.Length > 1)
                 {
-                    string name = _capital.Change(parameters[0]);
+                    string name = parameters[0];
                     string value = parameters[1];
-                    
+
                     FieldInfo field = t.GetType().GetField(name);
                     if (field == null)
                         continue;
@@ -53,7 +42,7 @@ namespace CLI
                     t = (T)boxed;
                 }
             }
-            
+
             return t;
         }
     }
